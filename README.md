@@ -16,7 +16,7 @@ The script runs under the current user session. If you're in an interactive shel
 ```
 runas /user:contoso.local\user1 /netonly powershell
 ```
-If you're working in a non-interactive shell, you can use <a href="https://github.com/antonioCoco/RunasCs">Invoke-RunasCs</a> to run commands under a different security context.
+If you're working in a non-interactive shell, you can use <a href="https://github.com/antonioCoco/RunasCs">Invoke-RunasCs</a>
 
 ```
 Invoke-RunasCs -Domain contoso.local -Username user1 -Password dfgV?DS7-8 -Command 'powershell . "C:\Find-DCOMLocalAdminAccess.ps1";Find-DCOMLocalAdminAccess -lhost "192.168.56.30"' -logontype 9
